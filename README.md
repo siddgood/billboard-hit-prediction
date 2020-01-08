@@ -45,9 +45,25 @@ Also, after EDA, I decided to only consider songs released between 2000-2018 bec
 
 Here's a list of all the models I tested:
   1. Logistic Regression
-  2. Backward Stepwise Logistic Regression
+  2. Improved Logistic Regression (with un-important Spotify features removed)
   3. LDA
   4. 10-fold CV CART
   5. Random Forest
   6. Bagging
   7. 10-fold CV KNN
+  
+**Model Summaries**
+
+| Model   | Accuracy   | TPR   | AUC   |
+| -----   | :--------: | :---: | :---: |
+| Baseline | 0.798 | na | na |
+| Logistic Regression | 0.809 | 0.289 | 0.786 |
+| **Improved Logistic Regression** | **0.810** | **0.300** | **0.785** |
+| LDA | 0.805 | 0.280 | 0.774 |
+| 10-fold CV CART | 0.805 | 0.123 | 0.706 |
+| Random Forest | 0.813 | 0.174 | 0.7731 |
+| **Bagging** | **0.818** | **0.300** | **0.785** |
+| 10-fold CV KNN | 0.801 | 0.014 | 0.736 |
+
+
+
