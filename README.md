@@ -39,3 +39,13 @@ The above graphs clearly show that audio features evolve over time. More importa
 The above graphs show the separability in the data when compared across two unique Spotify features; this suggests that data may separate across an n-dimensional feature space. Given this, the problem can alternatively be posed as an unsupervised learning problem where clustering methods can classify the data.
 
 ## Models
+Given the unbalanced nature of the dataset, any model chosen would automatically yield a high accuracy. So, in addition to aiming for a high accuracy, another objective of modelling is to ensure a high AUC (so that TPR is maximized and FPR is minimized). The AUC tells us how well the model is capable of distinguishing between the two classes.
+
+Here's a list of all the models I tested:
+  1. Logistic Regression
+  2. Backward Stepwise Logistic Regression
+  3. LDA
+  4. 10-fold CV CART
+  5. Random Forest
+  6. Bagging
+  7. 10-fold CV KNN
