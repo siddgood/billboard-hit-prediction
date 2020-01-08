@@ -14,3 +14,4 @@ Using Spotify's Audio Features & Analysis API, the following [features](https://
 
 Additonaly, lyrics were collected for each song using the [Musixmatch API](https://developer.musixmatch.com/documentation/api-reference/track-lyrics-get). I took a bag-of-words NLP approach to build a highly sparse (86%) matrix of unique words.
 
+After cleaning the data, a dataset of approx. 10000 songs was created.
