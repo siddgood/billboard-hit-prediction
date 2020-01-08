@@ -16,5 +16,18 @@ Additonaly, lyrics were collected for each song using the [Musixmatch API](https
 
 After cleaning the data, a dataset of approx. 10000 songs was created.
 
+![](images/data-distribution.png)
+![](images/fig-vs-decade.png)
+![](images/genre-dist.png)
+
 ## Exploratory Data Analysis
 
+**Spotify Features over Time**
+![](images/acoustic-vs-time.png)
+![](images/dance-vs-time.png)
+![](images/energy-vs-time.png)
+![](images/live-vs-time.png)
+![](images/loud-vs-time.png)
+![](images/speech-vs-time.png)
+
+The above graphs clearly show that audio features evolve over time. More importantly, the separability of data in certain graphs such as *Acousticness vs. Time* and *Loudness vs. Time* indicates potentially significant features that can help distinguish between the two classes.
