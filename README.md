@@ -4,6 +4,13 @@
 ## Overview
 Each year, Billboard publishes its Year-End Hot 100 songs list, which denotes the top 100 songs of that year. The objective of this project was to see whether or not a machine learning classifier could predict whether a song would become a hit *(known as [Hit Song Science](https://en.wikipedia.org/wiki/Hit_Song_Science))* given its intrinsic audio features as well as lyrics.
 
+The goal of this project is to see if a song's audio characteristics and lyrics can determine a song's popularity. Data and analytics aside, music listeners around the world probably have seen music trends change over time. Although each listener has custom interests in music, it is pretty clear when we listen to a hit song or soon to be hit song (consider Old Town Road). And over time, we see the characteristics of hit songs change. So, rather than using our intuition or "gut-feeling" to predict hit songs, the purpose of the project is to see if we can use intrinsic music data to identify hits.
+
+Hit Song Science can help music producers and artists know their audience better and produce songs that their fans would love to hear. Artists can better know what lyrics to write and tune the meaning of their song to what their fanbase would enjoy. Additionally, audio engineers can work with musicians to tweak intrinsic music qualities to make a song more popular catchy and likable.
+
+Also, it can highlight unknown artists whose music is characteristic of top songs on the Billboard Hot 100. This allows underground artists (i.e. Lil Tecca), who might not have the publicity help from an agency or a record label, to have a chance at gaining recognition. 
+
+
 ## Data and Features
 A sample of 19000 Spotify songs was downloaded from [Kaggle](https://www.kaggle.com/edalrami/19000-spotify-songs), which included songs from various Spotify albums. Additionally, Billboard charts from 1964-2018 were scraped from Billboard and Wikipedia.
 
@@ -70,7 +77,7 @@ Here's a list of all the models I tested:
 #### Stacking:
 Additionally, I tested out an ensemble method by stacking a few models together (logistic + LDA + CART). Model ensembling is a technique in which different models are combined to improve predictive power and improve accuracy. Details regarding stacking and ensemble methods can be found [here](https://www.kdnuggets.com/2017/02/stacking-models-imropved-predictions.html).
 
-**Model Correlation Matrix**
+**Model Correlation Matrix:**
 
 |     | lda | rpart | glm |
 | --- | --- | :-----: | :---: |
@@ -78,7 +85,9 @@ Additionally, I tested out an ensemble method by stacking a few models together 
 | **rpart** | 0.1656148 | 1.0000000 | 0.2025172 |
 | **glm** | 0.9283705 | 0.2025172 | 1.0000000 |
 
-**Model Summary**
+![](/images/stack-scatter.png)
+
+**Model Summary:**
 
 | Accuracy   | TPR   | AUC   |
 | :--------: | :---: | :---: |
@@ -94,11 +103,28 @@ Due to a large number of features (Spotify features + lyrics bag-of-words), I de
 
 (an explanation regarding penalty methods and shrinkage can be found [here](https://stats.stackexchange.com/questions/179864/why-does-shrinkage-work))
 
-**Model Summary**
+**Ridge: MSE vs. log(Λ)**
+![](/images/ridge.png)
+
+**Lasso: MSE vs. log(Λ)**
+![](/images/lasso.png)
+
+**Model Summary:**
 
 | Model   | Accuracy   | TPR   |
 | -----   | :--------: | :---: |
 | **Ridge** | 0.805 | 0.182 |
 | **Lasso** | 0.807 | 0.185 |
+
+Based on the model summary, the penalty methods were not that effective.
+
+## Conclusion
+The best model after testing seems to (improved) logistic regression and bagging. Both these models yielded high accuracy (~81%) and they had an above average TPR (~0.3) and AUC (~0.785). Also, the stacked model did a good job of minimizing FPR and helped increase the AUC (~0.80).
+
+## Future Work
+- [ ] Append more music awards (Grammy, Apple Music Awards, iHeartRadio Music Awards, etc.) to balance dataset of "hit" songs
+- [ ] Reduce time window (2-3 years) or prepare a time-series model
+- [ ] Build deep learning model
+
 
 
