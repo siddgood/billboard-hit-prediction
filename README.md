@@ -92,4 +92,12 @@ Due to a large number of features (Spotify features + lyrics bag-of-words), I de
 - **Ridge Regression**: all the features are included in the model, but variables with minor contribution have their coefficients close to zero
 - **Lasso Regression**: the coefficients of less contributive features are forced to zero and only the most significant features are kept
 
-(an explanation regarding penalty methods and shrinkage can be found [here](https://stats.stackexchange.com/questions/179864/why-does-shrinkage-work)
+(an explanation regarding penalty methods and shrinkage can be found [here](https://stats.stackexchange.com/questions/179864/why-does-shrinkage-work))
+
+**Model Summary**
+| Model   | Accuracy   | TPR   |
+| -----   | :--------: | :---: |
+| Ridge | 0.805 | 0.182 |
+| Lasso | 0.807 | 0.185 |
+
+
