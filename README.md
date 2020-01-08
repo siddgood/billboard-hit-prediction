@@ -38,10 +38,10 @@ The above graphs clearly show that audio features evolve over time. More importa
 
 The above graphs show the separability in the data when compared across two unique Spotify features; this suggests that data may separate across an n-dimensional feature space. Given this, the problem can alternatively be posed as an unsupervised learning problem where clustering methods can classify the data.
 
-## Models
-Given the unbalanced nature of the dataset, any model chosen would automatically yield high accuracy. So, in addition to aiming for high accuracy, another objective of modelling is to ensure a high AUC (so that TPR is maximized and FPR is minimized). The AUC tells us how well the model is capable of distinguishing between the two classes.
+## Models and Results
+Given the unbalanced nature of the dataset, any model chosen would automatically yield high accuracy. So, in addition to aiming for high accuracy, another objective of modeling is to ensure a high AUC (so that TPR is maximized and FPR is minimized). The AUC tells us how well the model is capable of distinguishing between the two classes.
 
-Also, after EDA, I decided to only consider songs released between 2000-2018 because it is evident that music trends and acoustic features change over time, and song characteristics of the '90s would probably be not reflective of 00's and 10's decades. *(Note: For the sake of sample size I decided to combine '00s and '10s decades together. However, with the conglomeration of more songs and awards, it is probably better to consider a smaller time window)*
+Also, after EDA, I decided to only consider songs released between 2000-2018 because it is evident that music trends and acoustic features change over time, and song characteristics of the '90s would probably be not reflective of '00s and '10s decades. *(Note: For the sake of sample size I decided to combine '00s and '10s decades together. However, with the conglomeration of more songs and awards, it is probably better to consider a smaller time window)*
 
 Here's a list of all the models I tested:
   1. Logistic Regression
@@ -52,7 +52,7 @@ Here's a list of all the models I tested:
   6. Bagging
   7. 10-fold CV KNN
   
-**Model Summaries**
+**Model Summaries:**
 
 | Model   | Accuracy   | TPR   | AUC   |
 | -----   | :--------: | :---: | :---: |
@@ -64,6 +64,27 @@ Here's a list of all the models I tested:
 | Random Forest | 0.813 | 0.174 | 0.7731 |
 | **Bagging** | **0.818** | **0.300** | **0.785** |
 | 10-fold CV KNN | 0.801 | 0.014 | 0.736 |
+
+### Additional Modeling
+
+#### Stacking
+Additionally, I tested out an ensemble method by stacking a few models together (logistic + LDA + CART). Model ensembling is a technique in which different models are combined to improve predictive power and improve accuracy. Details regarding stacking and ensemble methods can be found [here](https://www.kdnuggets.com/2017/02/stacking-models-imropved-predictions.html).
+
+**Model Correlation Matrix**
+
+|     | lda | rpart | glm |
+| --- | --- | :-----: | :---: |
+| **lda** | 1.0000000 | 0.1656148 | 0.9283705 |
+| **rpart** | 0.1656148 | 1.0000000 | 0.2025172 |
+| **glm** | 0.9283705 | 0.2025172 | 1.0000000 |
+
+| Accuracy   | TPR   | AUC   |
+| :--------: | :---: | :---: |
+| 0.814 | 0.297 | 0.797 |
+
+The stacked model achieved high accuracy and TPR that is comparable to the improved logistic regression and bagging model. However, more importantly, the stacked model greatly improved the AUC.
+
+#### Penalized Regression
 
 
 
