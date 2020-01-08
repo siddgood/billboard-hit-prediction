@@ -37,3 +37,5 @@ The above graphs clearly show that audio features evolve over time. More importa
 ![](images/acoustic-vs-loud.png)
 
 The above graphs show the separability in the data when compared across two unique Spotify features; this suggests that data may separate across an n-dimensional feature space. Given this, the problem can alternatively be posed as an unsupervised learning problem where clustering methods can classify the data.
+
+## Models
