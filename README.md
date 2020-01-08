@@ -78,7 +78,7 @@ Additionally, I tested out an ensemble method by stacking a few models together 
 | **rpart** | 0.1656148 | 1.0000000 | 0.2025172 |
 | **glm** | 0.9283705 | 0.2025172 | 1.0000000 |
 
-![](/images/stack-scatter.png)
+![](/images/stack-scatter.png){:height="50%" width="50%"}
 
 **Model Summary**
 
