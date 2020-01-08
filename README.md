@@ -1,7 +1,7 @@
 # Billboard Hot 100 Hit Prediction
 Predicting Billboard's Year-End Hot 100 Songs using audio features from Spotify and lyrics from Musixmatch
 
-## Abstract
+## Overview
 Each year, Billboard publishes its Year-End Hot 100 songs list, which denotes the top 100 songs of that year. The objective of this project was to see whether or not a machine learning classifier could predict whether a song would become a hit *([Hit Song Science](https://en.wikipedia.org/wiki/Hit_Song_Science))* given its intrinsic audio features as well as lyrics.
 
 ## Data & Features
