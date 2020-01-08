@@ -78,8 +78,6 @@ Additionally, I tested out an ensemble method by stacking a few models together 
 | **rpart** | 0.1656148 | 1.0000000 | 0.2025172 |
 | **glm** | 0.9283705 | 0.2025172 | 1.0000000 |
 
-![](/images/stack-scatter.png){:height="50%" width="50%"}
-
 **Model Summary**
 
 | Accuracy   | TPR   | AUC   |
@@ -89,6 +87,9 @@ Additionally, I tested out an ensemble method by stacking a few models together 
 The stacked model achieved high accuracy and TPR that is comparable to the improved logistic regression and bagging model. However, more importantly, the stacked model greatly improved the AUC.
 
 #### Penalized Regression:
+Due to a large number of features (Spotify features + lyrics bag-of-words), I decided to use a penalized logistic regression model. This imposes a penalty to the logistic model for having too many variables. This results in lowering the dimensionality of the feature spacing by shrinking the coefficients of the less important features toward zeros. I specifically used the following penalized regression techniques:
 
+- **Ridge Regression**: all the features are included in the model, but variables with minor contribution have their coefficients close to zero
+- **Lasso Regression**: the coefficients of less contributive features are forced to zero and only the most significant features are kept
 
-
+(an explanation regarding penalty methods and shrinkage can be found [here](https://stats.stackexchange.com/questions/179864/why-does-shrinkage-work)
