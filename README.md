@@ -67,7 +67,7 @@ Here's a list of all the models I tested:
 
 ### Additional Modeling
 
-#### Stacking
+#### Stacking:
 Additionally, I tested out an ensemble method by stacking a few models together (logistic + LDA + CART). Model ensembling is a technique in which different models are combined to improve predictive power and improve accuracy. Details regarding stacking and ensemble methods can be found [here](https://www.kdnuggets.com/2017/02/stacking-models-imropved-predictions.html).
 
 **Model Correlation Matrix**
@@ -78,13 +78,15 @@ Additionally, I tested out an ensemble method by stacking a few models together 
 | **rpart** | 0.1656148 | 1.0000000 | 0.2025172 |
 | **glm** | 0.9283705 | 0.2025172 | 1.0000000 |
 
+**Model Summary**
+
 | Accuracy   | TPR   | AUC   |
 | :--------: | :---: | :---: |
 | 0.814 | 0.297 | 0.797 |
 
 The stacked model achieved high accuracy and TPR that is comparable to the improved logistic regression and bagging model. However, more importantly, the stacked model greatly improved the AUC.
 
-#### Penalized Regression
+#### Penalized Regression:
 
 
 
