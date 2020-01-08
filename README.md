@@ -95,9 +95,10 @@ Due to a large number of features (Spotify features + lyrics bag-of-words), I de
 (an explanation regarding penalty methods and shrinkage can be found [here](https://stats.stackexchange.com/questions/179864/why-does-shrinkage-work))
 
 **Model Summary**
+
 | Model   | Accuracy   | TPR   |
 | -----   | :--------: | :---: |
-| Ridge | 0.805 | 0.182 |
-| Lasso | 0.807 | 0.185 |
+| **Ridge** | 0.805 | 0.182 |
+| **Lasso** | 0.807 | 0.185 |
 
 
