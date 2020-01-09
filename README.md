@@ -134,6 +134,8 @@ The best model after testing seems to (improved) logistic regression and bagging
 5. https://www.kdnuggets.com/2017/02/stacking-models-imropved-predictions.html
 6. https://stats.stackexchange.com/questions/179864/why-does-shrinkage-work
 7. https://statweb.stanford.edu/~jtaylo/courses/stats203/notes/penalized.pdf
+8. https://towardsdatascience.com/decision-tree-ensembles-bagging-and-boosting-266a8ba60fd9
+9. https://towardsdatascience.com/ensemble-methods-in-machine-learning-what-are-they-and-why-use-them-68ec3f9fef5f
 
 
 
