@@ -122,9 +122,18 @@ Based on the model summary, the penalty methods were not that effective.
 The best model after testing seems to (improved) logistic regression and bagging. Both these models yielded high accuracy (~81%) and they had an above average TPR (~0.3) and AUC (~0.785). Also, the stacked model did a good job of minimizing FPR and helped increase the AUC (~0.80).
 
 ## Future Work
-- [ ] Append more music awards (Grammy, Apple Music Awards, iHeartRadio Music Awards, etc.) to balance dataset of "hit" songs
-- [ ] Reduce time window (2-3 years) or prepare a time-series model
-- [ ] Build deep learning model
+- Append more music awards (Grammy, Apple Music Awards, iHeartRadio Music Awards, etc.) to balance dataset of "hit" songs
+- Reduce time window (2-3 years) or prepare a time-series model
+- Build deep learning model
+
+## Sources
+1. https://www.kaggle.com/edalrami/19000-spotify-songs
+2. https://developer.spotify.com/discover/
+3. https://developer.musixmatch.com
+4. https://en.wikipedia.org/wiki/Hit_Song_Science
+5. https://www.kdnuggets.com/2017/02/stacking-models-imropved-predictions.html
+6. https://stats.stackexchange.com/questions/179864/why-does-shrinkage-work
+7. https://statweb.stanford.edu/~jtaylo/courses/stats203/notes/penalized.pdf
 
 
 
